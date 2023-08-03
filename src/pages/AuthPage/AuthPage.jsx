@@ -1,12 +1,12 @@
 import React from 'react'
 import SignUpForm from '../../components/SignUpForm/SignUpForm';
 
-export default function AuthPage() {
+export default function AuthPage({setUser}) {
   return (
     <> 
     <main>
     <div>AuthPage</div>
-    <SignUpForm />
+    <SignUpForm setUser={setUser} />
     </main>
     </>
   )
