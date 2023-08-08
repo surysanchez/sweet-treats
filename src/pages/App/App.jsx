@@ -1,33 +1,33 @@
 import { useState } from 'react';
 import './App.css';
 import AuthPage from '../AuthPage/AuthPage';
-import MenuPage from '../MenuPage/MenuPage';
-import NewOrderPage from '../NewOrderPage/NewOrderPage';
-import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import { Routes, Route } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import { getUser } from '../../utilities/users-service';
+import CakesPage from '../CakesPage/CakesPage';
+import { treats, cakes } from '../../data.js';
+import HomePage from '../HomePage/HomePage';
+import AboutPage from '../AboutPage/AboutPage';
+import ContactPage from '../ContactPage/ContactPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
   return (
     <main className="App">
      <>
-     {/* < NavBar user={user} /> */}
-      {/* <Routes>
-        <Route path="/menu" element={<MenuPage />}></Route>
-      </Routes> */}
-      { user ?
-       <><NavBar user={user} setUser={setUser} />
+    <NavBar user={user} setUser={setUser} />
        <Routes>
-            <Route path="/orders/new" element={<NewOrderPage />}></Route>
-            <Route path="/orders" element={<OrderHistoryPage />}></Route>
-          </Routes></>
-       :
-       < AuthPage setUser={setUser} />
 
-      }
-     
+            <Route path='/cakes' element={ <CakesPage cakes={cakes} />}  >  </Route>  
+            <Route path="/" element={<HomePage cakes={cakes} treats={treats} />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+
+            
+            {/* <Route path='/authpage' element={ < AuthPage setUser={setUser} /> }>  </Route> */}
+            
+          </Routes>
+      
      </>
     </main>
   );
