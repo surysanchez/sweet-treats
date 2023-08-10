@@ -5,28 +5,120 @@
   
 }
 body{
-  height: 100vh;
-  width: 100vw;
+  padding:  1%;
+  display: flex;
+  justify-self: center;
+  align-items: center;
 }
 
-@media screen and (min-width: 500px){
+nav{
+  
+  
+}
+
+/* Mobile  */
+@media screen and (max-width: 480px){
   .treat-card{
-    height: 0vh;
-    width: 20vw;
+    height: 10vh;
+    width: 25vw;
   }
   .img{
+    background: cover;
+    height: 15vh;
+    width: 15vw;
    
   }
-  cards-container{
-    margin-top: 5%;
-  }
   
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 16%);
+    border-radius: 10px;
+    gap: 8%;
+    padding-bottom: 15px;
+  
+  }
+}
+
+/* Extra small devices  */
+@media (min-width: 481px) and (max-width: 767px){
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 27%);
+    border-radius: 10px;
+    padding: auto;
+    gap: 5%;
+    
+  }
+  .treat-card{
+    height: auto;
+    width: 28vw;
+  }
+
+  .img{
+    background: cover;
+  
+  }
+
+}
+
+/* Small Tablets */
+@media (min-width: 768px) and (max-width: 991px){
+  .cards-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 29%);
+    border-radius: 10px;
+    gap: 8%;
+    border-style:hidden;
+  }
+  .treat-card{
+    height: auto;
+    width: 28vw;
+  }
+
+}
+
+/* Large Tablets  */
+@media (min-width: 992px) and (max-width: 1199px){
   .cards-container {
     display: grid;
     grid-template-columns: repeat(3, 25%);
     border-radius: 10px;
     gap: 5%;
     border-style:hidden;
+    
   }
+  .treat-card{
+    height: auto;
+    width: 28vw;
+  }
+
 }
 
+
+
+/* Destoks */
+@media (min-width: 1200px) and (max-width: 1919px){
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 25%);
+    border-radius: 10px;
+    gap: 5%;
+    border-style:hidden;
+    
+  }
+
+}
+
+/* Extra Large Screens */
+@media (min-width: 1920px) {
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 25%);
+    border-radius: 10px;
+    gap: 5%;
+    border-style:hidden;
+   
+  }
+
+}

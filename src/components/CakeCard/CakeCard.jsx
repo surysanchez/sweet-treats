@@ -19,7 +19,7 @@ export default function CakeCard({cake}) {
           />
           <Card.Body>
             <Card.Title>{cake.name}</Card.Title>
-            <Card.Text></Card.Text>
+            {/* <Card.Text></Card.Text> */}
             {/* <Button variant="primary" */}
 
             {/* </Button> */}
