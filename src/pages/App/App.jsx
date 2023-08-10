@@ -9,6 +9,8 @@ import { treats, cakes } from '../../data.js';
 import HomePage from '../HomePage/HomePage';
 import AboutPage from '../AboutPage/AboutPage';
 import ContactPage from '../ContactPage/ContactPage';
+import TreatsPage from '../TreatsPage/TreatsPage';
+import TreatDetailPage from '../TreatDeatailPage/TreatDetailPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -19,9 +21,12 @@ export default function App() {
        <Routes>
 
             <Route path='/cakes' element={ <CakesPage cakes={cakes} />}  >  </Route>  
+            <Route path="/treats" element={<TreatsPage treats={treats} />} />
+            <Route path="/treats/:treatName" element={<TreatDetailPage treats={treats} />} />
             <Route path="/" element={<HomePage cakes={cakes} treats={treats} />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+         
 
             
             {/* <Route path='/authpage' element={ < AuthPage setUser={setUser} /> }>  </Route> */}

@@ -5,8 +5,8 @@ export default function CakesPage({cakes}) {
   return (
     <>
       <div className="cards-box">
-        {cakes.map((cake, idx) => {
-          return <CakeCard key={cake.id} cake={cake} idx={idx} />;
+        {cakes.map((cake) => {
+          return <CakeCard key={cake.id} cake={cake}  />;
         })}
       </div>
     </>

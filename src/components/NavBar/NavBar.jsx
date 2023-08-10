@@ -29,8 +29,9 @@ export default function NavBar({ user, setUser }) {
               <Nav.Link href="/authpage">Sign Up/ Login In </Nav.Link>
             ) : ( */}
             <>
+           
               <Nav.Link href="/createOwn">Create your Own</Nav.Link>
-              <Nav.Link href="/treats">My Treats</Nav.Link>
+              <Nav.Link href="/mytreats">My Treats</Nav.Link>
             </>
             {/* // )} */}
             <br />
@@ -72,6 +73,7 @@ export default function NavBar({ user, setUser }) {
             {/* </Nav>
         {/* </Navbar.Collapse> */}
             {/* <Nav.Link href='/order'>Cart </Nav.Link>  */}
+            
           </Nav>
         </Navbar.Collapse>
       </Navbar>

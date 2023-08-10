@@ -10,100 +10,88 @@ body{
   align-items: center;
 }
 
-nav{
-  
-  
-}
-
-
 
 /* Mobile  */
 @media screen and (max-width: 480px){
-  .treat-card{
-    height: 10vh;
-    width: 25vw;
-  }
-  .img{
-    background: cover;
-    height: 15vh;
-    width: 15vw;
-   
-  }
-  .card-container{
-    padding: 5%;
-  }
-  
   .cards-box{
     display: grid;
-    grid-template-columns: repeat(3, 16%);
+    grid-template-columns: repeat(3, 30%);
     border-radius: 10px;
     gap: 8%;
     padding-bottom: 15px;
   
   }
+  .treat-card{
+    height: 40vh;
+    width: 20vw;
+   
+  }
+  img{
+    height: 20vh;
+    width: 20vw;
+  }
+
+  
 }
 
 /* Extra small devices  */
 @media (min-width: 481px) and (max-width: 767px){
-  .card-container{
-    padding: 5%;
-  }
   .cards-box {
     display: grid;
-    grid-template-columns: repeat(3, 27%);
+    grid-template-columns: repeat(3, 24%);
     border-radius: 10px;
-    padding: auto;
-    gap: 5%;
+    gap: 8%;
     
   }
   .treat-card{
-    height: auto;
-    width: 28vw;
+    height: 40vh;
+    width: 22vw;
   }
-
-  .img{
-    background: cover;
-  
+  img{
+    height: 20vh;
+    width: 20vw;
   }
 
 }
 
 /* Small Tablets */
 @media (min-width: 768px) and (max-width: 991px){
-  .card-container{
-    padding: 5%;
-  }
+
   .cards-box {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(3, 29%);
+    grid-template-columns: repeat(3, 26%);
     border-radius: 10px;
     gap: 8%;
-    border-style:hidden;
   }
   .treat-card{
-    height: auto;
-    width: 28vw;
+    height: 46vh;
+    width: 22vw;
+  }
+  img{
+    height: 35vh;
+    width: 35vw;
   }
 
 }
 
 /* Large Tablets  */
 @media (min-width: 992px) and (max-width: 1199px){
-  .card-container{
-    padding: 5%;
-  }
+
   .cards-box {
     display: grid;
     grid-template-columns: repeat(3, 25%);
     border-radius: 10px;
-    gap: 5%;
-    border-style:hidden;
+    gap: 15%;
     
   }
   .treat-card{
-    height: auto;
-    width: 28vw;
+    height: 44vh;
+    width: 24vw;
+  }
+  img{
+    height: 40vh;
+    width: 40vw;
   }
 }
 
@@ -111,32 +99,46 @@ nav{
 
 /* Destoks */
 @media (min-width: 1200px) and (max-width: 1919px){
-  .card-container{
-    padding: 5%;
-  }
+
   .cards-box {
     display: grid;
-    grid-template-columns: repeat(3, 30%);
+    grid-template-columns: repeat(3, 19%);
     border-radius: 10px;
-    gap: 5%;
-    border-style:hidden;
+    gap: 10%;
     
   }
+  .treat-card{
+    height: 50vh;
+    width: 24vw;
+   
+  }
+  img{
+    height: 50vh;
+    width: 50vw;
+  }
+  
 
 }
 
 /* Extra Large Screens */
 @media (min-width: 1920px) {
-  .card-container{
-    padding: 5%;
-  }
+
   .cards-box{
     display: grid;
-    grid-template-columns: repeat(3, 30%);
+
+    grid-template-columns: repeat(3, 25%);
     border-radius: 10px;
-    gap: 5%;
-    border-style:hidden;
+    gap: 18%;
    
   }
+  .treat-card{
+    height: 45vh;
+    width: 28vw;
+  }
+  img{
+    height: 52vh;
+    width: 27vw;
+  }
+
 
 }

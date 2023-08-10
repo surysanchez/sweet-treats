@@ -1,21 +1,24 @@
 .logo{
-    /* display: grid;
-    justify-content: center; */
-    border-radius: 60%;
-    width: 130px; 
-    height: 130px;
-    margin-top: -25px;
-  }
-  .logo:hover{
-    transform: scale(1.1);
-  }
+   
+  border-radius: 60%;
+  width: 10vw; 
+  height: 17vh;
+ 
+}
+.logo:hover{
+  transform: scale(1.1);
+}
+.navbar{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  width: 100vw;
+  margin: 0%;
+  border-style: none;
   
-  .navbar{
-    display: flex;
-    width: 100vw;
-    margin: 0%;
-    padding: 0%;
-    border-style: none;
-    
-  }
+}
+
+Nav.Link{
+  font-size: xx-large;
+}
   
