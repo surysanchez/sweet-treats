@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 export default function CakeCard({cake}) {
   return (
     <>
-      <Container fluid >
+      <Container fluid  className="cards-container">
         {/* <Link to={`/customtreat/${props.custom.name}`} className="treat-link"> */}
         <Card className="treat-card">
           <Card.Img
