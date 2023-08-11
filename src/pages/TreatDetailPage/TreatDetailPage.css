@@ -1,0 +1,100 @@
+/* Mobile  */
+@media screen and (max-width: 480px){
+    .card-detail{
+        
+        display: flex;
+        justify-content: center;
+        grid-template-columns: repeat(3, 1fr);
+     
+    }
+  }
+  
+  /* Extra small devices  */
+  @media (min-width: 481px) and (max-width: 767px){
+    .card-detail{
+      
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2, 40%);
+        grid-template-rows: repeat(1, 50%);
+    
+    }
+    img{
+        width: 70vw;
+        height: 45vh;
+    }
+  
+  }
+  
+  /* Small Tablets */
+  @media (min-width: 768px) and (max-width: 991px){
+  
+    .card-detail{
+      
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2, 40%);
+        grid-template-rows: repeat(1, 50%);
+    
+    }
+    img{
+        width: 30vw;
+        height: 50vh;
+    }
+  
+  }
+  
+  /* Large Tablets  */
+  @media (min-width: 992px) and (max-width: 1199px){
+  
+    .card-detail{
+      
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2, 35%);
+        grid-template-rows: repeat(1, 37%);
+    
+    }
+    img{
+        width: 12vw;
+        height: 55vh;
+    }
+  }
+  
+  
+  
+  /* Destoks */
+  @media (min-width: 1200px) and (max-width: 1919px){
+    .card-detail{
+      
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2, 30%);
+        grid-template-rows: repeat(1, 35%);
+    
+    }
+    img{
+        width: 15vw;
+        height: 60vh;
+    }
+    
+  
+  }
+  
+  /* Extra Large Screens */
+  @media (min-width: 1920px) {
+    .card-detail{
+      
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2, 28%);
+        grid-template-rows: repeat(1, 30%);
+    
+    }
+    img{
+        width: 10vw;
+        height: 65vh;
+    }
+   
+ 
+  }

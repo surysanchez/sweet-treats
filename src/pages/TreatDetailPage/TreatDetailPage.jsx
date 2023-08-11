@@ -3,6 +3,7 @@ import Figure from "react-bootstrap/Figure";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
+import './TreatDetailPage.css'
 
 export default function TreatDetailPage({ treats }) {
 
@@ -10,14 +11,15 @@ export default function TreatDetailPage({ treats }) {
   let treat = treats.find((t) => t.name === treatName);
   return (
     <>
-      <Container>
+      <Container fluid>
         <Card
-          // style={{ width: "15rem", height: "14rem" }}
-          className="cards-box"
+          // style={{ width: "18rem", height: "18rem" }}
+         className="card-detail"
         >
+          <Figure.Caption>{treat.name.toUpperCase()}</Figure.Caption>
           <Card.Img
             style={{
-              width: "rem",
+              // width: "14rem", height: "18rem",
               background: "no-repeat center",
               WebkitBackgroundSize: "cover",
             }}
@@ -25,7 +27,7 @@ export default function TreatDetailPage({ treats }) {
             alt=""
             src={treat.picture}
           />
-          <Figure.Caption>{treat.name.toUpperCase()}</Figure.Caption>
+          
           {/* <Figure>
        {treat.description}
       </Figure> */}

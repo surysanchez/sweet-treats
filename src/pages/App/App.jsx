@@ -10,7 +10,8 @@ import HomePage from '../HomePage/HomePage';
 import AboutPage from '../AboutPage/AboutPage';
 import ContactPage from '../ContactPage/ContactPage';
 import TreatsPage from '../TreatsPage/TreatsPage';
-import TreatDetailPage from '../TreatDeatailPage/TreatDetailPage';
+import TreatDetailPage from '../TreatDetailPage/TreatDetailPage';
+import CreateOwnCake from '../CreateOwnCake/CreateOwnCake';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -23,6 +24,8 @@ export default function App() {
             <Route path='/cakes' element={ <CakesPage cakes={cakes} />}  >  </Route>  
             <Route path="/treats" element={<TreatsPage treats={treats} />} />
             <Route path="/treats/:treatName" element={<TreatDetailPage treats={treats} />} />
+            <Route path="/createcake" element={<CreateOwnCake user={user} setUser={setUser} />} />
+
             <Route path="/" element={<HomePage cakes={cakes} treats={treats} />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
