@@ -30,8 +30,8 @@ export default function NavBar({ user, setUser }) {
             ) : ( */}
             <>
            
-              <Nav.Link href="/createOwn">Create your Own</Nav.Link>
-              <Nav.Link href="/mytreats">My Treats</Nav.Link>
+              <Nav.Link href="/createcake">Create your Own</Nav.Link>
+              <Nav.Link href="/mycakes">My Treats</Nav.Link>
             </>
             {/* // )} */}
             <br />

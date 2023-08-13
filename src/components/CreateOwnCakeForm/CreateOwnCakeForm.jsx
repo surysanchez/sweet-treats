@@ -2,6 +2,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Container from "react-bootstrap/Container";
+import Image from 'react-bootstrap/Image';
 import { React, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
@@ -10,6 +11,8 @@ import {
     filling,
     flavour,
   } from "../../data.js";
+  import { getAllCakes } from "../../utilities/cakes-api.js";
+  import * as cakesAPI from '../../utilities/cakes-api.js'
 import { set } from "mongoose";
 
 
@@ -22,37 +25,51 @@ export default function CreateOwnCakeForm() {
         comments: "",
     });
 
-   
-
+    useEffect(function () {
+      async function getCakes() {
+        const cakes = await getAllCakes();
+        setCake(cakes);
+      }
+      getCakes();
+    }, []);
   
-    // handleChange = (evt) => {
-    //     setCake({...cake, [evt.target.name] : evt.target.value});
+    const navigate = useNavigate();
 
-    // }
+    const handleChange = (evt) => {
+      setCake({ ...cake, [evt.target.name]: evt.target.value });
+    };
 
     const handleSubmit = async (evt) => {
+      evt.preventDefault();
+      try {
+        await cakesAPI.createCake(cake); // Call the createCake function from treats-api.js
+  
+        navigate("/mycakes"); // Redirect to the home page after successful creation
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    // console.log(cake);
 
-    }
 
   return (
    <>
     <Container fluid>
-          <div>
+         
             <br />
             <h2>Create your Own Cake!</h2>
-            <img
-              src="https://media2.giphy.com/media/xT0BKqxuUDfosKEXXG/200.webp?cid=ecf05e47tl218yrqqfdavtow6evmwcj8iwjr267hlt0ad0uj&ep=v1_gifs_search&rid=200.webp&ct=g"
-              alt=""
-            />
-          </div>
+           
+            <Image src="https://media2.giphy.com/media/xT0BKqxuUDfosKEXXG/200.webp?cid=ecf05e47tl218yrqqfdavtow6evmwcj8iwjr267hlt0ad0uj&ep=v1_gifs_search&rid=200.webp&ct=g" fluid />
+          <br />
   
           <Form onSubmit={handleSubmit}>
+            <br />
             <FloatingLabel controlId="floatingSelect" label="Select Ocassion">
               <Form.Select
                 aria-label="Floating label select example"
                 name="Ocassion"
                 value={cake.Ocassion}
-                // onChange={handleChange}
+                onChange={handleChange}
                 required
               >
                 <option>Celebration</option>
@@ -76,7 +93,7 @@ export default function CreateOwnCakeForm() {
                 aria-label="Floating label select example"
                 name="size"
                 value={cake.size}
-                // onChange={handleChange}
+                onChange={handleChange}
               >
                 <option>Sizes</option>
                 <option value={size[0]}>{size[0]}</option>
@@ -94,7 +111,7 @@ export default function CreateOwnCakeForm() {
                 aria-label="Floating label select example"
                 name="flavour"
                 value={cake.flavour}
-                // onChange={handleChange}
+                onChange={handleChange}
               >
                 <option>Flavours</option>
                 <option value={flavour[0]}>{flavour[0]}</option>
@@ -114,7 +131,7 @@ export default function CreateOwnCakeForm() {
                 aria-label="Floating label select example"
                 name="filling"
                 value={cake.filling}
-                // onChange={handleChange}
+                onChange={handleChange}
               >
                 <option>Fillings</option>
                 <option value={filling[0]}>{filling[0]}</option>
@@ -134,7 +151,7 @@ export default function CreateOwnCakeForm() {
               label="Comments"
               name="comments"
               value={cake.comments}
-            //   onChange={handleChange}
+              onChange={handleChange}
             >
               <Form.Control type="text" placeholder="Extra comments" />
             </FloatingLabel>
