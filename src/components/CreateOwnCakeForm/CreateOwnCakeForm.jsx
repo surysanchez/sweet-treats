@@ -58,8 +58,9 @@ export default function CreateOwnCakeForm() {
          
             <br />
             <h2>Create your Own Cake!</h2>
-           
+           {/* <div>
             <Image src="https://media2.giphy.com/media/xT0BKqxuUDfosKEXXG/200.webp?cid=ecf05e47tl218yrqqfdavtow6evmwcj8iwjr267hlt0ad0uj&ep=v1_gifs_search&rid=200.webp&ct=g" fluid />
+            </div> */}
           <br />
   
           <Form onSubmit={handleSubmit}>
