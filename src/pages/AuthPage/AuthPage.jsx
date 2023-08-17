@@ -5,6 +5,7 @@ import { useState } from "react";
 
 export default function AuthPage({setUser}) {
   const [showForm, setShowForm] = useState(true)
+  
 
   return (
     <> 

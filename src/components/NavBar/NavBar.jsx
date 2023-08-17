@@ -25,15 +25,15 @@ export default function NavBar({ user, setUser }) {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            {/* {!user ? (
+          {!user ? (
               <Nav.Link href="/authpage">Sign Up/ Login In </Nav.Link>
-            ) : ( */}
+            ) : (
             <>
            
               <Nav.Link href="/createcake">Create your Own</Nav.Link>
               <Nav.Link href="/mycakes">My Treats</Nav.Link>
             </>
-            {/* // )} */}
+             )} 
             <br />
             <Navbar.Brand>
               <Nav.Link href="/">
@@ -44,35 +44,22 @@ export default function NavBar({ user, setUser }) {
             <Nav.Link href="/cakes">Cakes Gallery</Nav.Link>
             <Nav.Link href="/treats">Treats Gallery</Nav.Link>
 
-            {/* <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav"> */}
-            {/* <Nav className="me-auto"> */}
-            {/* <NavDropdown title="Account" id="basic-nav-dropdown"> */}
             <NavDropdown title="More" id="basic-nav-dropdown">
-              {/* <NavDropdown.Item href="/orders">Order History</NavDropdown.Item>
-            <NavDropdown.Item href="/orders/new">
-              New Order
-              </NavDropdown.Item> */}
-
+         
               <Nav.Link href="/about">About us</Nav.Link>
               <Nav.Link href="/contact">Contact us</Nav.Link>
 
               <NavDropdown.Item href="#action/3.4"></NavDropdown.Item>
-              {/* {user ? (
+              {user ? (
                 <Button Link to="" onClick={handleLogOut}>
                   LOG OUT
                 </Button>
               ) : (
                 <Nav.Link href="/authpage">Sign Up/ Login In </Nav.Link>
-              )} */}
+              )}
               <NavDropdown.Divider />
-              <Nav.Link href="/order">
-              </Nav.Link>
             </NavDropdown>
 
-            {/* </Nav>
-        {/* </Navbar.Collapse> */}
-            {/* <Nav.Link href='/order'>Cart </Nav.Link>  */}
             
           </Nav>
         </Navbar.Collapse>
