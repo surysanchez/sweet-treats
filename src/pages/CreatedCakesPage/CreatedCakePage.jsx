@@ -36,7 +36,7 @@ export default function CreatedCakePage({user}) {
         {cakes.map((cake, t) => {
             let cakeId = cake._id
             return (
-                <ShowCakesForm user={user}  cake={cake} cakeId={cakeId} key={t}  handleDelete={handleDelete}  />
+                <ShowCakesForm user={user}  cake={cake} cakeId={cakeId} key={t}  handleDelete={handleDelete} setcakes={setCakes}  cakes={cakes}/>
             )
         })}
        

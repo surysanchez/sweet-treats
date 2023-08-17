@@ -27,7 +27,7 @@ export default function UpdateCreatedCake({user}) {
 
   return (
     <>
-    < UpdateCreatedCakeForm cakes={cakes} cakeId={cakeId} user={user} />
+    < UpdateCreatedCakeForm cakes={cakes} cakeId={cakeId} user={user} setCakes  />
     </>
   )
 }

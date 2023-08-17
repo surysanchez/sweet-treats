@@ -46,7 +46,7 @@ export default function ShowCakesForm({
           </ListGroup>
           <Button variant="warning">
             {" "}
-            <Link to={`/update/${cakeId}`} cakes={cakes} setcakes={setcakes}>
+            <Link to={`/update/${cakeId}`} cakes={cakes} setcakes={setcakes} cake={cake} >
               {" "}
               Edit
             </Link>
