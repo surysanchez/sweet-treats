@@ -50,13 +50,13 @@ export default function NavBar({ user, setUser }) {
               <Nav.Link href="/contact">Contact us</Nav.Link>
 
               <NavDropdown.Item href="#action/3.4"></NavDropdown.Item>
-              {user ? (
+              {/* {user ? (
                 <Button Link to="" onClick={handleLogOut}>
                   LOG OUT
                 </Button>
               ) : (
                 <Nav.Link href="/authpage">Sign Up/ Login In </Nav.Link>
-              )}
+              )} */}
               <NavDropdown.Divider />
             </NavDropdown>
 

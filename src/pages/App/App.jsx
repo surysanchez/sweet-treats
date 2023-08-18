@@ -38,7 +38,7 @@ export default function App() {
          
 
             
-            <Route path='/authpage' element={ < AuthPage setUser={setUser} /> }>  </Route>
+            {/* <Route path='/authpage' element={ < AuthPage setUser={setUser} /> }>  </Route> */}
             
           </Routes>
       
